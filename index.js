@@ -20,6 +20,7 @@ var handleRequest = function(req, res) {
 
   req.setEncoding('utf8');
 
+  // Data needs to be captured in Node 0.10 or it will be paused...
   req.on('data', function(data) {
     buffer += data;
   });
